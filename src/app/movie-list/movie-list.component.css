@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.card {
+    margin: 12px;
+    
+    text-align: center;
+    display: inline-block;
+}
+
+.movie-stat {
+    color: bisque;
+}
+
+.fa-heart {
+    color: rgb(0, 102, 255);
+}
+.fa-heart:hover {
+    cursor: pointer;
+    color: red;
+}

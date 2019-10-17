@@ -6,6 +6,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AboutComponent } from './components/about/about.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { Error404Component } from './errors/404.components';
+import { UserHomeComponent } from './user.home/user.home.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 
 
@@ -25,6 +28,18 @@ const routes: Routes = [
   {
     path: 'signin',
     component: SigninComponent
+  },
+  {
+    path: 'user',
+    component: UserHomeComponent
+  },
+  {
+    path: 'movie-list',
+    component: MovieListComponent
+  },
+  {
+    path: 'movie-details/:id',
+    component: MovieDetailsComponent
   },
   { path: '',  redirectTo: '/', pathMatch: 'full' },
   {

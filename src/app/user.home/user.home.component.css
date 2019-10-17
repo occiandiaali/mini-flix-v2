@@ -1,0 +1,8 @@
+.jumbotron{
+	background-image: url('https://cdn.pixabay.com/photo/2016/09/14/08/18/film-1668918__340.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    color: blanchedalmond;
+    margin-top: 25px;
+    height: 750px;
+}
