@@ -1,0 +1,32 @@
+<main role="main">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">What do you want to watch today?</h1>
+      <p>Get a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+      <p><a class="btn btn-success btn-lg" routerLink="signin" role="button">Sign In</a></p>
+      <a href="#movie_list"><img src="./../../../assets/finger-down.png" alt="finger down" class="fingerDown bounce" /></a>
+    </div>
+  </div>
+  <!-- movie list container -->
+  <div class="container card-container" id="movie_list">
+      <h1>Movies</h1>
+      <section class="form-inline my-2 my-lg-0 search-form">
+          <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="search movies.." aria-label="Search">
+          <!--<button class="btn btn-outline-success bg-warning my-2 my-sm-0" id="search-btn">Search</button>-->
+      </section>
+      <hr>
+      <div class="card shadow p-3 mb-5 bg-white rounded" style="width:400px" *ngFor="let m of movies | filter : searchText">
+        <div class="card-body">
+          <h4 class="card-title">{{m.title}}</h4>
+          <p class="card-text">{{m.released}}</p>
+          <p *ngIf="show"><i class="fa fa-heart"></i></p>
+          <!-- <a [routerLink]="['/movie-details', m.id]" class="btn btn-outline-success" (click)="goToMovieDetails(m.id)">See Details</a> -->
+          <a class="btn btn-outline-success" [routerLink]="['/detail-movie', m.id]">See Details</a>
+        </div>
+    
+        <img class="card-img-bottom" [src]="m.image" alt="{{m.title}}" style="width:100%" (mouseover)="show=!show"/>
+      </div>
+    </div>
+  <!-- movie list container -->  
+</main>

@@ -1,0 +1,51 @@
+<div class="container mt-5 mb-5 ">
+  
+  <div class="card-columns" *ngFor="let m of (movies | movieSelected: id)">
+    
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Title</h5>
+        <p class="card-text">{{m.title}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Genre</h5>
+        <p class="card-text">{{m.genre}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Director</h5>
+        <p class="card-text">{{m.director}}</p>
+      </div>
+    </div>
+     <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Cast</h5>
+        <p class="card-text">{{m.cast}}</p>
+      </div>
+    </div>
+     <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Synopsis</h5>
+        <p class="card-text">{{m.synopsis}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Released</h5>
+        <p class="card-text">{{m.released}}</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Rating</h5>
+        <p class="card-text">{{m.rating}}</p>
+      </div>
+    </div>
+    <h2>{{m.title}} details</h2>
+    <img src="{{m.image}}" alt="{{m.title}}" id="detail-avatar" class="border border-info"/>
+  </div>
+  <a class="btn btn-outline-info" [routerLink]="['/user']">Back</a>
+</div>
