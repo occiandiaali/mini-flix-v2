@@ -23,6 +23,6 @@ body {
   and (max-device-width: 440px) 
   and (-webkit-min-device-pixel-ratio: 2) {
       .navbar {
-          width: 85%;
+          width: 93%;
       }
   }

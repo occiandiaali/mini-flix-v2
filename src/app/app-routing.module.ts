@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AboutComponent } from './components/about/about.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { Error404Component } from './errors/404.components';
-import { UserHomeComponent } from './user.home/user.home.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
-
+import { UserComponent } from './components/user/user.component';
+import { DetailMovieComponent } from './components/detail-movie/detail-movie.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: UserComponent
   },
   {
     path: 'about',
@@ -31,15 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'user',
-    component: UserHomeComponent
+    component: UserComponent
   },
   {
-    path: 'movie-list',
-    component: MovieListComponent
-  },
-  {
-    path: 'movie-details/:id',
-    component: MovieDetailsComponent
+    path: 'detail-movie/:id',
+    component: DetailMovieComponent
   },
   { path: '',  redirectTo: '/', pathMatch: 'full' },
   {
