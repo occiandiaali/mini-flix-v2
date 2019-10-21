@@ -7,11 +7,17 @@ import { SigninComponent } from './components/signin/signin.component';
 import { Error404Component } from './errors/404.components';
 import { UserComponent } from './components/user/user.component';
 import { DetailMovieComponent } from './components/detail-movie/detail-movie.component';
+import { FavouriteMoviesComponent } from './components/favourite-movies/favourite-movies.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'user',
     component: UserComponent
   },
   {
@@ -33,6 +39,10 @@ const routes: Routes = [
   {
     path: 'detail-movie/:id',
     component: DetailMovieComponent
+  },
+  {
+    path: 'favourites',
+    component: FavouriteMoviesComponent
   },
   { path: '',  redirectTo: '/', pathMatch: 'full' },
   {

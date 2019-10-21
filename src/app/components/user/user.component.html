@@ -4,8 +4,8 @@
     <div class="container">
       <h1 class="display-3">What do you want to watch today?</h1>
       <p>Get a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
-      <p><a class="btn btn-success btn-lg" routerLink="signin" role="button">Sign In</a></p>
-      <a href="#movie_list"><img src="./../../../assets/finger-down.png" alt="finger down" class="fingerDown bounce" /></a>
+      <p><a class="btn btn-success btn-lg" routerLink="/signin" role="button">Sign In</a></p>
+      <img src="./../../../assets/finger-down.png" alt="finger down" class="fingerDown bounce" />
     </div>
   </div>
   <!-- movie list container -->
@@ -20,7 +20,7 @@
         <div class="card-body">
           <h4 class="card-title">{{m.title}}</h4>
           <p class="card-text">{{m.released}}</p>
-          <p *ngIf="show"><i class="fa fa-heart"></i></p>
+          <p *ngIf="show" (click)="addFav()"><i class="fa fa-heart"></i></p>
           <!-- <a [routerLink]="['/movie-details', m.id]" class="btn btn-outline-success" (click)="goToMovieDetails(m.id)">See Details</a> -->
           <a class="btn btn-outline-success" [routerLink]="['/detail-movie', m.id]">See Details</a>
         </div>

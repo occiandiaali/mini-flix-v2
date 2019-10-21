@@ -13,10 +13,13 @@ import { SigninComponent } from './components/signin/signin.component';
 import { Error404Component } from './errors/404.components';
 
 import { MovieService } from './services/movie.service';
+import { DataService } from './services/data.service';
 import { UserComponent } from './components/user/user.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DetailMovieComponent } from './components/detail-movie/detail-movie.component';
 import { MovieSelectedPipe } from './pipes/movie-selected.pipe';
+import { FavouriteMoviesComponent } from './components/favourite-movies/favourite-movies.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +33,16 @@ import { MovieSelectedPipe } from './pipes/movie-selected.pipe';
     UserComponent,
     FilterPipe,
     DetailMovieComponent,
-    MovieSelectedPipe
+    MovieSelectedPipe,
+    FavouriteMoviesComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [MovieService],
+  providers: [MovieService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
